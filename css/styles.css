@@ -84,6 +84,19 @@ main {
 }
 
 
+.gallery  {
+  list-style: none;  
+}
+
+.gallery li {
+  display: block;
+  text-align: center;
+  margin-bottom: 2em;
+  transition:all 0.75s ease;
+}
+
+
+
 /* form styles */
 
 input, textarea, select { 
@@ -219,15 +232,31 @@ footer {
 
 /* Styles for the tablet screens */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
 
-  div {
-    overflow: auto;
+  .gallery li {
+    width: 50%;
+    float: left;    
   }
 
   main {
-    max-width: 800px;
+    max-width: 541px;
     margin: 0 auto;
+    overflow: auto; /* prevent footer moving up because of floats */
+  }
+
+}
+
+@media screen and (min-width: 780px) {
+
+  .gallery li {
+    width: 33%;
+    float: left;
+  }
+
+  main {
+    max-width: 781px;
+    margin: 0 auto;    
   }
 
   label {
@@ -263,16 +292,21 @@ footer {
     width: 100%;
   }
 
-  footer p {
-    max-width: 75%;
-    margin: 16px auto;
-  }
-
-  .footer__nav p {
-    float: left;
-  }
 
 
 } 
 
+@media screen and (min-width: 1024px) {
+
+  main {
+    max-width: 1025px;
+    margin: 0 auto;
+  }
+
+  .gallery li {
+    width: 25%;
+    float: left;
+  }
+
+}
 
