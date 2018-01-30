@@ -6,10 +6,10 @@ $('.gallery').lightGallery({
 
 /* search filter using text in each list element */
 function filter(element) {
-    var value = $(element).val();
+    var value = $(element).val().toUpperCase();
 
     $(".gallery > li").each(function() {
-        if ($(this).text().search(value) > -1) {
+        if ($(this).text().toUpperCase().search(value) > -1) {
             $(this).show();
         }
         else {
